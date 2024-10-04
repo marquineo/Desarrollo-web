@@ -1,3 +1,6 @@
+<?php
+include "funciones.inc.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -39,39 +42,10 @@
         } else {
             $s = 1; // Valor por defecto
         }
-
-        function cuenta($a, $b, $c = 1) //$c no es obligatoria, si esta vacio, se la asigna 1
-        {
-            $diff = 0;
-            if ($a < $b) {
-                $aux = $b - $c; //para que el for no muestre el último número con coma y hacerle un echo sin coma fuera del for
-                for ($i = $a; $i < $aux; $i += $c) {
-                    echo "$i,";
-                }
-                $diff = $b - $i;
-                echo $i;//<- echo fuera del for
-                if($diff == $c){ //soluciona un proble que no me mostraba el último número si el salto era exacto
-                    echo ",$b";
-                }
-            } else if ($b < $a) {
-                $aux = $b + $c;
-                for ($i = $a; $i > $aux; $i -= $c) {
-                    echo "$i,";
-                }
-                $diff = $i - $b;
-                echo $i;
-                if($diff == $c){
-                    echo ",$b";
-                }
-            } else {
-                echo "Los numero no pueden ser igual para contar, listillo";
-            }
-        }
-
         if ($s < 0) {
             echo "El salto no puede ser negativo, listillo";
         } else if($diff > $s){
-            cuenta($n1, $n2, $s);
+            cuentaAmplicacion($n1, $n2, $s);
         }
     }
     ?>

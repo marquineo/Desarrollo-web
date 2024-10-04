@@ -9,8 +9,12 @@ include "funciones.inc.php";
     <title>Document</title>
 </head>
 <body>
-    <?php
-    cuenta(10,20);
-    ?>
+    
+<?php
+    $fechaactual = time();
+    $textofecha = date("d M Y - H:i:s");
+    echo $textofecha;
+?>
+
 </body>
 </html>

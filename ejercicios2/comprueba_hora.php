@@ -11,24 +11,18 @@ include "funciones.inc.php";
 <body>
         <!--Formulario para enviar los datos-->
         <form method="POST" action="">
-        <label for="n1">Dime el primer número:</label>
-        <input type="number" name="n1" id="n1" required>
+        <label for="n1">Dame la fecha (hh:mm:ss):</label>
+        <input type="string" name="n1" id="n1" required>
         <br><br>
 
-        <label for="n2">Dime el segundo número:</label>
-        <input type="number" name="n2" id="n2" required>
-        <br><br>
-
-        <input type="submit" value="Intercambiar">
+        <input type="submit" value="Comprobar">
     </form>
 <?php
 
 //verificar el formulario HTML
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $n1 = $_POST['n1'];
-    $n2 = $_POST['n2'];
-   Intercambiar($n1,$n2);
-   echo "n1 = $n1 / n2 = $n2";
+    $hora = $_POST['n1'];
+    comprobarHora($hora);
 }
 ?>
 </body>

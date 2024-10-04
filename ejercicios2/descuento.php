@@ -1,3 +1,7 @@
+<?php
+include "funciones.inc.php";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -31,15 +35,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $desc = 0; // Valor por defecto
     }
 
-    function calculaDescuento($pre,$des = 0){
-        if($des != 0){
-        $resto = $pre / $des;
-        $pre -= $resto;
-        return $pre;
-    }else{
-        return $pre;
-    }
-    }
+
     $preciototal = calculaDescuento($prec,$desc);
     echo "El precio total sería de $preciototal";
 

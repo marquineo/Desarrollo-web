@@ -1,3 +1,6 @@
+<?php
+include "funciones.inc.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,9 +11,6 @@
 <body>
     
     <?php
-    function saludo($n){
-        echo "Hola, $n";
-    }
     saludo("Marcos");
     ?>
 
