@@ -17,7 +17,7 @@
     file_put_contents($ficherocopia, $datos);
     $datoscopiados = file_get_contents($ficherocopia) or die ("No exite el fichero de copia");
     echo "Datos copiados: $datoscopiados";
-
+    //no funciona
     ?>
 </body>
 
